@@ -24,7 +24,7 @@ public class EmailController {
     public ResponseEntity<Email> enviarEmail(@RequestBody @Valid EmailDto emailDto) {
         Email email = new Email();
         BeanUtils.copyProperties(emailDto, email);
-        emailService.enviarEmail(email);
+        email = emailService.enviarEmail(email);
         return new ResponseEntity<>(email, HttpStatus.CREATED);
     }
 }

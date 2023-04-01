@@ -23,7 +23,7 @@ public class Email {
     private String destinatario;
     private String assunto;
     @Column(columnDefinition = "TEXT")
-    private String testo;
+    private String texto;
     @Column(name = "data_hora")
     private LocalDateTime dataHora;
     @Enumerated(EnumType.STRING)

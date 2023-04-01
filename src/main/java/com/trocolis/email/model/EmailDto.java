@@ -26,5 +26,5 @@ public class EmailDto {
     private String assunto;
 
     @NotBlank
-    private String testo;
+    private String texto;
 }
