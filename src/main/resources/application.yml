@@ -1,0 +1,19 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://${MS_MAIL_DS_HOST}:${MS_MAIL_DS_PORT}/msmail?createDatabaseIfNotExist=true
+    username: ${MS_MAIL_DS_USER}
+    password: ${MS_MAIL_DS_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
